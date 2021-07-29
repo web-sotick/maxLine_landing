@@ -1,0 +1,11 @@
+.sprite-icon {
+	display: inline-block;
+	fill: currentColor;
+}
+
+{{#shapes}}
+.sprite-icon__{{base}} {
+	height:{{height.inner}}px;
+	width:{{width.inner}}px;
+}
+{{/shapes}}

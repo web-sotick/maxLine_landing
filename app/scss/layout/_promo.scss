@@ -1,0 +1,391 @@
+.promo {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    &::after{
+        position: absolute;
+        content: "";
+        display: block;
+        top:-100%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        background: url("../../img/locked.png");
+        transition: .6s;
+        opacity: 0;
+    }
+
+
+    > img {
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__wrapper {
+        @include row();
+        padding-top: 163px;
+        height: 100%;
+        flex-wrap: nowrap;
+    }
+
+    &__left-img {
+        @include col();
+        @include size(6/12);
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+
+        @include sm {
+            display: none;
+        }
+
+        img {
+            @include xlg {
+                position: absolute;
+                width: 574px;
+                left: -22px;
+            }
+            @include md {
+                position: absolute;
+                width: 682px;
+                left: -192px;
+            }
+        }
+    }
+
+    &__info-block {
+        @include col();
+        @include size(6/12);
+        transform: skewX(349deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include xlg {
+            position: relative;
+            right: 10%;
+        }
+
+        @include md {
+            @include size(5/6);
+        }
+
+        @include sm {
+            right: 0;
+            @include size(1);
+            align-items: center;
+            transform: skewX(0deg);
+        }
+
+        &_title {
+            font-family: "PF";
+            font-weight: bold;
+            font-size: 94.8605px;
+            line-height: 100%;
+            color: $prime;
+            transform: skewX(11deg);
+
+            @include lg {
+                font-size: 66px;
+            }
+
+            @include md {
+                font-size: 71px;
+            }
+
+            @include sm {
+                font-size: 53px;
+                transform: skewX(349deg);
+                p{
+                    transform: skewX(11deg);
+                }
+            }
+        }
+
+        &_count {
+            font-family: "PF";
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            margin-bottom: 37px;
+
+            @include lg {
+                margin-bottom: 26px;
+            }
+        }
+
+        &_count-num {
+            font-size: 163.785px;
+            line-height: 99%;
+            position: relative;
+            z-index: 1;
+            padding: 30px;
+            transform: skewX(11deg);
+
+            @include lg {
+                font-size: 114px;
+                padding: 21px;
+            }
+
+            @include md {
+                font-size: 124px;
+            }
+            @include sm {
+                font-size: 92px;
+                padding: 17px;
+                transform: skewX(0deg);
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -10px;
+                bottom: 0;
+                z-index: -1;
+                background: $prime;
+                margin: auto;
+                width: 52px;
+                height: 112px;
+                border-radius: 15px;
+                transform: skewX(349deg);
+                @include sm {
+                    left: -5px;
+                    width: 29px;
+                    height: 63px;
+                    transform: skewX(349deg);
+                }
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                border-radius: 15px;
+                box-shadow: inset 0px 4.3097px 4.3097px rgba(255, 255, 255, 0.27),
+                    inset 0px 19.3937px 23.7034px rgba(82, 242, 123, 0.06),
+                    inset 0px 3.23228px 14.0065px rgba(59, 208, 97, 0.29);
+                backdrop-filter: blur(45.2519px);
+                transform: skewX(349deg);
+                @include sm {
+                    transform: skewX(349deg);
+                }
+            }
+        }
+
+        &_count-type {
+            font-size: 84.8088px;
+            line-height: 99%;
+            position: relative;
+            padding: 15px;
+            z-index: 4;
+            right: 20px;
+            transform: skewX(11deg);
+            
+            @include lg {
+                right: 10px;
+                font-size: 59px;
+                padding: 11px;
+            }
+            
+            @include md {
+                font-size: 64px;
+            }
+            @include sm {
+                transform: skewX(0deg);
+                font-size: 48px;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -6px;
+                bottom: 0;
+                z-index: -1;
+                background: $prime;
+                margin: auto;
+                width: 27px;
+                height: 58px;
+                border-radius: 7px;
+                transform: skewX(349deg);
+                @include sm {
+                    height: 32px;
+                    left: -3px;
+                    width: 15px;
+                    transform: skewX(349deg);
+                }
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                border-radius: 7px;
+                box-shadow: inset 0px 4.3097px 4.3097px rgba(255, 255, 255, 0.27),
+                    inset 0px 19.3937px 23.7034px rgba(82, 242, 123, 0.06),
+                    inset 0px 3.23228px 14.0065px rgba(59, 208, 97, 0.29);
+                backdrop-filter: blur(45.2519px);
+                transform: skewX(349deg);
+                @include sm {
+                    transform: skewX(349deg);
+                }
+            }
+        }
+
+        &_subtitle {
+            font-family: "PF";
+            font-weight: bold;
+            font-size: 69px;
+            line-height: 100%;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 43px;
+            position: relative;
+            right: 11px;
+
+            @include lg {
+                font-size: 49px;
+            }
+            @include md {
+                font-size: 52px;
+            }
+            @include sm {
+                font-size: 40px;
+            }
+
+            p {
+                transform: skewX(11deg);
+                right: -11px;
+                position: relative;
+                @include sm {
+                    transform: skewX(0deg);
+                 &:last-child{
+                     display: none;
+                 }
+                }
+            }
+        }
+
+        &_btns {
+            display: flex;
+            align-self: flex-start;
+            align-items: center;
+            margin-bottom: 150px;
+
+            @include sm {
+                margin-left: auto;
+                margin-right: auto;
+                transform: skewX(349deg);
+                margin-bottom: 93px;
+            }
+
+            button {
+                margin-right: 26px;
+                position: relative;
+                background: none;
+                border: none;
+                padding: 15px 23px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-family: "PF";
+                font-style: italic;
+                font-weight: bold;
+                font-size: 37px;
+                line-height: 99%;
+                text-transform: uppercase;
+
+                @include lg {
+                    font-size: 24px;
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    border-radius: 7px;
+                    background: #e91524;
+                    border-radius: 6px;
+                    transform: skewX(0);
+                    opacity: 1;
+                    filter: drop-shadow(0px 5.52574px 69.0717px rgba(233, 21, 36, 0.63));
+                    transition: .3s;
+                }
+
+                span {
+                    transform: skewX(11deg);
+                }
+
+                &:hover {
+                    filter: drop-shadow(0px 5.52574px 69.0717px rgba(233, 21, 36, 1));
+                    transition: .3s;
+                    img {
+                        left: 10px;
+                        transition: 0.3s;
+                    }
+                }
+
+                img {
+                    left: 0;
+                    transition: 0.3s;
+                    margin-left: 25px;
+                    position: relative;
+                }
+            }
+
+            a {
+                font-family: "PF";
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 99%;
+                text-decoration-line: underline;
+                color: #ffffff;
+                transition: 0.3s;
+                opacity: 0.5;
+                &:hover {
+                    transition: 0.3s;
+                    opacity: 1;
+                }
+
+                @include lg {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+.container {
+    height: 100%;
+}
+.promo-locked {
+    transition: .6s;
+    &::after{
+        transition: .6s;
+        opacity: 1;
+        top: 0;
+        
+    }
+}

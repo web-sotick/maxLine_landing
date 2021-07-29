@@ -1,0 +1,22 @@
+.header {
+
+    &__wrapper {
+        @include col();
+        @include size(1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: auto;
+        left: 0;
+        right: 0;
+        top: 60px;
+    }
+}
+.container {
+}
+.row {
+}
+.main{
+    position: relative;
+}
